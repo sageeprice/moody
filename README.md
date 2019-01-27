@@ -21,3 +21,18 @@ Primary motivation is to create a project using several AWS tools. The only actu
 
 1. [Identity and Access Management (IAM)](https://aws.amazon.com/iam/) controls resource and service access. IAM roles and policies are used for all interactions within Moody, e.g. Lambda write permissions to DynamoDB are controlled via IAM.
 1. [CloudWatch](https://aws.amazon.com/cloudwatch/) is enabled for the moody Lambda, so all traces resulting from Lambda execution are logged. This has been very helpful in debugging issues with actual execution - while running a Lambda on fixed input for a unit test is simple, I could not find any logging for real traffic within Lambda itself. CloudWatch also provides alarms: besides base DynamoDB alarms, one additional alarm on Lambda execution error rate has been added for this project.
+1. [Simple Storage System S3](https://aws.amazon.com/s3/) is used incidentally to store endpoints (i.e. phone numbers) for Pinpoint. I had a lot of trouble specifying endpoints for Pinpoint, and kept running into Exceptions (specifically NotFoundException came up several times) trying to configure an endpoint via the AWS CLI. Importing a JSON blob from S3 worked relatively seamlessly.
+
+## Usage
+
+Currently, moody is only enabled for my personal use since this whole thing is just for my benefit and learning. Hit me up if you want some help setting up a similar system.
+
+## Future work
+
+Data collection is complete, everything else isn't.
+
+1. Define APIs to aggregate mood summaries over time windows.
+1. Display mood reports over time windows.
+1. Graph mood ratings, incorporating labels.
+1. Enable export/download of mood summaries.
+1. Consider expanding to support other users (probably just my family).
