@@ -1,5 +1,7 @@
 # vue-calendar
 
+Actual site up at [sageprice.dev/moody](https://sageprice.dev/moody)
+
 ## Project setup
 ```
 npm install
