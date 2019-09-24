@@ -99,6 +99,7 @@
         return avgs
       },
       getByDayRatings(reports) {
+        // Seven days in a week
         const dayBuckets = [[], [], [], [], [], [], []]
         reports.forEach(r => {
           dayBuckets[r['WeekdayNumber']].push(r['MoodRating'])
