@@ -15,12 +15,6 @@ npm install
 npm run serve
 ```
 
-or
-
-```
-vue serve
-```
-
 ### Compiles and minifies for production
 ```
 npm run build
