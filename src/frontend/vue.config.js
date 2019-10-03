@@ -7,6 +7,7 @@ module.exports = {
     'index': {
       entry: 'src/pages/index/main.js',
       template: 'public/index.html',
+      filename: 'index.html',
       // when using title option, template title tag needs to be 
       // <title><%= htmlWebpackPlugin.options.title 
       title: 'Home',
@@ -15,6 +16,7 @@ module.exports = {
     'moody': {
       entry: 'src/pages/moody/main.js',
       template: 'public/index.html',
+      filename: 'moody/index.html',
       // When using title option, template title tag needs to be 
       // <title><%= htmlWebpackPlugin.options.title 
       title: 'Moody',
@@ -23,6 +25,7 @@ module.exports = {
     'not-found': {
       entry: 'src/pages/not-found/main.js',
       template: 'public/index.html',
+      filename: 'not-found/index.html',
       // When using title option, template title tag needs to be 
       // <title><%= htmlWebpackPlugin.options.title 
       title: 'Not Found',
