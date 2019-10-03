@@ -29,7 +29,15 @@
     </div>
     <div class="bar-graph-wrapper">
       <bar-graph class="inner-graph" v-bind:chartData="{
-          labels: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+          labels: [
+            'Sunday',
+            'Monday',
+            'Tuesday',
+            'Wednesday',
+            'Thursday',
+            'Friday',
+            'Saturday'
+          ],
           datasets: [
             {
               label: 'Average Rating by Day',
