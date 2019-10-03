@@ -10,15 +10,23 @@ module.exports = {
       // when using title option, template title tag needs to be 
       // <title><%= htmlWebpackPlugin.options.title 
       title: 'Home',
-      chunks: ['index'],
+      chunks: ['chunk-vendors', 'chunk-common', 'index'],
     },
-    moody: {
+    'moody': {
       entry: 'src/pages/moody/main.js',
       template: 'public/index.html',
       // When using title option, template title tag needs to be 
       // <title><%= htmlWebpackPlugin.options.title 
       title: 'Moody',
-      chunks: ['moody'],
+      chunks: ['chunk-vendors', 'chunk-common', 'moody'],
+    },
+    'not-found': {
+      entry: 'src/pages/not-found/main.js',
+      template: 'public/index.html',
+      // When using title option, template title tag needs to be 
+      // <title><%= htmlWebpackPlugin.options.title 
+      title: 'Not Found',
+      chunks: ['chunk-vendors', 'chunk-common', 'not-found'],
     },
   }
 }
