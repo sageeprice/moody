@@ -1,14 +1,18 @@
 <template>
   <div id="app">
-    <h1>Home page bitches</h1>
+    <Header/>
+    <h1>Hi, thanks for visiting. Still under construction, come back later.</h1>
   </div>
 </template>
 
 <script>
+import Header from "@/components/Header";
 
 export default {
   name: 'app',
-  components: {},
+  components: {
+    Header,
+  },
 }
 </script>
 
@@ -19,6 +23,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+body {
+  margin: 0px;
 }
 </style>
